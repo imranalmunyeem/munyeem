@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Card — Imran Al Munyeem</title>
+  <meta name="description" content="Digital business card of Imran Al Munyeem, PhD Researcher in Computer Science at Nottingham Trent University. Save the contact or scan the QR code.">
+
+  <link rel="canonical" href="https://imranalmunyeem.com/card">
+  <meta property="og:title" content="Imran Al Munyeem — Business Card">
+  <meta property="og:description" content="PhD Researcher in Computer Science, Nottingham Trent University. Save my contact with one tap.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://imranalmunyeem.com/card">
+  <meta property="og:image" content="https://imranalmunyeem.com/ogimage.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%239a3412'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' font-style='italic' fill='%23fdfcf8' text-anchor='middle'>M</text></svg>">
+
+  <script>
+    (function () {
+      try {
+        var r = document.documentElement;
+        r.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+        r.setAttribute('data-accent', localStorage.getItem('accent') || 'amber');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-accent', 'amber');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css?v=10">
+
+  <style>
+    .card-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.25rem;
+      gap: 1.25rem;
+    }
+    .biz-card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      padding: 2.25rem 2rem 2rem;
+      text-align: center;
+    }
+    .biz-avatar {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 1rem;
+      padding: 3px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    }
+    .biz-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+    .biz-name {
+      font-size: 1.625rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+    }
+    .biz-name em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+    .biz-role {
+      font-size: 0.9375rem;
+      color: var(--fg-muted);
+      margin-top: 0.25rem;
+    }
+    .biz-org {
+      font-size: 0.8438rem;
+      color: var(--fg-dim);
+      margin-bottom: 1.25rem;
+    }
+    .biz-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .biz-actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+    .biz-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.375rem;
+      margin-bottom: 1.5rem;
+    }
+    .biz-links a {
+      padding: 0.375rem 0.75rem;
+      background: var(--bg-tint);
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--fg-muted);
+      transition: all 0.2s ease;
+    }
+    .biz-links a:hover {
+      color: var(--bg-raised);
+      background: var(--accent);
+    }
+    .biz-qr {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .biz-qr .qr-tile {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 10px;
+      line-height: 0;
+      border: 1px solid var(--border);
+    }
+    .biz-qr .qr-tile svg {
+      width: 148px;
+      height: 148px;
+    }
+    .biz-qr p {
+      font-size: 0.75rem;
+      color: var(--fg-dim);
+    }
+    .card-back {
+      font-size: 0.875rem;
+      color: var(--fg-muted);
+    }
+    .card-back a {
+      color: var(--accent);
+    }
+    .card-back a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card-page">
+    <div class="biz-card">
+      <div class="biz-avatar">
+        <picture>
+          <source srcset="profileavatar.webp" type="image/webp">
+          <img src="profileavatar.jpg" alt="Imran Al Munyeem" width="96" height="96">
+        </picture>
+      </div>
+
+      <h1 class="biz-name">Imran Al <em>Munyeem</em></h1>
+      <p class="biz-role">PhD Researcher in Computer Science</p>
+      <p class="biz-org">Nottingham Trent University · Cybersecurity · Cyber Ranges</p>
+
+      <div class="biz-actions">
+        <a class="btn btn-primary" href="contact.vcf" download="Imran-Al-Munyeem.vcf">
+          Save contact
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="mailto:munyeem.swe@gmail.com">Email me</a>
+      </div>
+
+      <div class="biz-links">
+        <a href="https://www.linkedin.com/in/imranalmunyeem/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/imranalmunyeem" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=b2R3NKsAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://orcid.org/0009-0007-3538-1172" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://dev.to/imranalmunyeem" target="_blank" rel="noopener">DEV</a>
+      </div>
+
+      <div class="biz-qr">
+        <div class="qr-tile" aria-label="QR code linking to this business card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198 198"><path transform="scale(6)" stroke="#18181b" d="M2 2.5h7m3 0h5m3 0h1m3 0h7m-29 1h1m5 0h1m2 0h1m6 0h4m2 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h1m3 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h3m1 0h4m1 0h3m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m8 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h1m5 0h2m1 0h3m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-19 1h1m4 0h1m1 0h2m1 0h1m-20 1h1m2 0h1m1 0h1m1 0h2m2 0h1m1 0h1m2 0h1m2 0h2m1 0h2m1 0h1m-27 1h2m1 0h2m2 0h1m1 0h4m5 0h1m1 0h1m1 0h1m1 0h1m2 0h2m-28 1h3m1 0h2m1 0h4m1 0h3m1 0h1m2 0h2m4 0h1m1 0h1m-28 1h3m3 0h1m3 0h1m1 0h1m1 0h4m1 0h2m2 0h2m1 0h2m-29 1h1m5 0h1m3 0h1m6 0h1m2 0h1m2 0h1m4 0h1m-28 1h1m2 0h2m1 0h1m2 0h2m6 0h1m3 0h1m1 0h1m1 0h1m1 0h1m-28 1h2m1 0h1m1 0h1m2 0h1m4 0h2m1 0h1m2 0h1m3 0h1m3 0h1m-27 1h4m1 0h1m2 0h1m3 0h2m1 0h2m2 0h1m1 0h1m1 0h1m2 0h1m-28 1h2m3 0h1m1 0h1m2 0h1m2 0h1m2 0h1m2 0h2m5 0h1m-28 1h2m1 0h1m4 0h4m1 0h1m3 0h1m4 0h4m2 0h1m-25 1h3m1 0h1m2 0h6m1 0h1m1 0h1m4 0h1m2 0h1m-27 1h3m2 0h1m1 0h1m1 0h3m1 0h3m1 0h2m4 0h1m-26 1h2m1 0h5m2 0h1m1 0h3m2 0h1m2 0h6m1 0h2m-21 1h2m4 0h3m1 0h3m3 0h1m1 0h3m-29 1h7m2 0h3m3 0h2m2 0h2m1 0h1m1 0h1m3 0h1m-29 1h1m5 0h1m2 0h1m5 0h1m1 0h1m1 0h2m3 0h2m2 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h3m2 0h1m1 0h1m1 0h6m2 0h2m-29 1h1m1 0h3m1 0h1m2 0h1m8 0h1m4 0h1m2 0h2m-28 1h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h4m1 0h3m3 0h1m1 0h2m-29 1h1m5 0h1m1 0h2m1 0h5m1 0h2m1 0h4m1 0h1m1 0h2m-29 1h7m10 0h1m2 0h3m1 0h2m1 0h1"/></svg>
+        </div>
+        <p>Scan to open this card</p>
+      </div>
+    </div>
+
+    <p class="card-back"><a href="/">← imranalmunyeem.com</a></p>
+  </main>
+</body>
+</html>
