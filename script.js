@@ -29,8 +29,8 @@ sections.forEach(s => io.observe(s));
   const panel = document.getElementById('themePanel');
   if (!toggleBtn || !panel) return;
 
-  const getTheme = () => root.getAttribute('data-theme') || 'dark';
-  const getAccent = () => root.getAttribute('data-accent') || 'amber';
+  const getTheme = () => root.getAttribute('data-theme') || 'light';
+  const getAccent = () => root.getAttribute('data-accent') || 'emerald';
 
   const syncActive = () => {
     panel.querySelectorAll('[data-mode]').forEach(b =>

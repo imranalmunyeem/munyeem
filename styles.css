@@ -41,22 +41,22 @@
 :root[data-theme="light"] {
   color-scheme: light;
 
-  --bg: #fafafa;
+  --bg: #f5f8f6;
   --bg-raised: #ffffff;
-  --bg-tint: #f4f4f5;
-  --fg: #18181b;
-  --fg-muted: #52525b;
-  --fg-dim: #71717a;
-  --border: #e4e4e7;
-  --border-strong: #d4d4d8;
+  --bg-tint: #eef2f0;
+  --fg: #101413;
+  --fg-muted: #54605b;
+  --fg-dim: #7b857f;
+  --border: #e5eae7;
+  --border-strong: #d2d9d5;
   --ok: #15803d;
 
   --accent: #b45309;
   --accent-dark: #92400e;
 
-  --shadow-sm: 0 1px 2px 0 rgba(20, 15, 5, 0.04);
-  --shadow-md: 0 4px 16px -4px rgba(20, 15, 5, 0.08), 0 2px 4px -2px rgba(20, 15, 5, 0.04);
-  --shadow-lg: 0 12px 32px -8px rgba(20, 15, 5, 0.12), 0 4px 8px -4px rgba(20, 15, 5, 0.06);
+  --shadow-sm: 0 1px 2px 0 rgba(16, 24, 20, 0.05);
+  --shadow-md: 0 6px 24px -6px rgba(16, 24, 20, 0.10), 0 2px 6px -2px rgba(16, 24, 20, 0.05);
+  --shadow-lg: 0 24px 56px -16px rgba(16, 24, 20, 0.16), 0 8px 20px -8px rgba(16, 24, 20, 0.07);
 }
 
 /* Accent options (dark values by default, deeper values in light mode for contrast) */
@@ -154,7 +154,7 @@ img, svg {
 }
 
 :root[data-theme="light"] .nav {
-  background: rgba(250, 250, 250, 0.8);
+  background: rgba(245, 248, 246, 0.82);
 }
 
 .nav.scrolled {
@@ -446,9 +446,28 @@ img, svg {
    ============================================================ */
 
 .hero {
+  position: relative;
   padding: 8rem 2rem 6rem;
   max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(58% 52% at 32% 22%,
+      color-mix(in srgb, var(--accent) 15%, transparent) 0%, transparent 68%),
+    radial-gradient(45% 40% at 88% 12%,
+      color-mix(in srgb, var(--accent) 8%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-inner {
@@ -1998,6 +2017,86 @@ img, svg {
 }
 
 /* ============================================================
+   BEYOND WORK — personal interests
+   ============================================================ */
+
+.beyond-lead {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--fg-muted);
+  max-width: var(--content-width);
+  margin-bottom: 2rem;
+}
+
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.beyond-card {
+  padding: 1.5rem 1.5rem 1.375rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all 0.25s ease;
+}
+
+.beyond-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.beyond-emoji {
+  display: block;
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.beyond-card h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin-bottom: 0.25rem;
+}
+
+.beyond-card p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+}
+
+.coffee-note {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: color-mix(in srgb, var(--tint, var(--accent)) 12%, var(--bg-raised));
+  border: 1px solid color-mix(in srgb, var(--tint, var(--accent)) 30%, var(--border));
+  border-radius: var(--radius-lg);
+}
+
+.coffee-emoji {
+  font-size: 1.75rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.coffee-note p {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--fg-muted);
+}
+
+.coffee-note p::selection {
+  background: var(--accent);
+}
+
+/* ============================================================
    SECTION TINTS — subtle glass panels per section
    ============================================================ */
 
@@ -2015,6 +2114,7 @@ img, svg {
 #experience     { --tint: #818cf8; }
 #blog           { --tint: #f472b6; }
 #profiles       { --tint: #94a3b8; }
+#beyond         { --tint: #84cc16; }
 
 main > .section {
   position: relative;

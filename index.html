@@ -37,16 +37,16 @@
     (function () {
       try {
         var r = document.documentElement;
-        r.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
-        r.setAttribute('data-accent', localStorage.getItem('accent') || 'amber');
+        r.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+        r.setAttribute('data-accent', localStorage.getItem('accent') || 'emerald');
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.documentElement.setAttribute('data-accent', 'amber');
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.setAttribute('data-accent', 'emerald');
       }
     })();
   </script>
 
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=14">
 
   <script type="application/ld+json">
   {
@@ -108,6 +108,7 @@
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#blog">Blog</a>
+      <a href="#beyond">Life</a>
     </div>
 
     <div class="nav-right">
@@ -342,21 +343,6 @@
       </div>
 
       <div class="pubs">
-        <article class="pub-card">
-          <div class="pub-meta">
-            <span class="badge badge-venue">Book · Zenodo</span>
-            <span class="pub-year">2026</span>
-          </div>
-          <h3 class="pub-title">API Testing Using Postman: The Practical Guide to Modern API Testing</h3>
-          <p class="pub-authors">Imran Al Munyeem · Open-access book</p>
-          <p class="pub-desc">A practical, open-source guide to modern API testing with Postman — HTTP/REST foundations, JavaScript test scripting, CI/CD automation with Newman, Jenkins, and GitHub Actions, mock servers, monitors, and AI-assisted testing with Postbot.</p>
-          <div class="pub-actions">
-            <a href="https://imranalmunyeem.github.io/api-testing-using-postman" class="pub-link" target="_blank" rel="noopener">Read online</a>
-            <a href="https://drive.google.com/file/d/1GlY501plt53rziZ2o5f7OoNz_kjakPqd/view?usp=sharing" class="pub-link" target="_blank" rel="noopener">View PDF</a>
-            <a href="https://doi.org/10.5281/zenodo.21347134" class="pub-link" target="_blank" rel="noopener">DOI</a>
-          </div>
-        </article>
-
         <article class="pub-card">
           <div class="pub-meta">
             <span class="badge badge-venue">IEEE UEMCON</span>
@@ -987,6 +973,60 @@
       </div>
     </section>
 
+    <section class="section" id="beyond">
+      <div class="section-head">
+        <p class="section-label">Beyond Work</p>
+        <h2 class="section-title">Life away from the <em>terminal.</em></h2>
+      </div>
+
+      <p class="beyond-lead">
+        Research and code fill most of my week — but I recharge outdoors and on the mats. Here's what I get up to when the laptop is closed.
+      </p>
+
+      <div class="beyond-grid">
+        <article class="beyond-card">
+          <span class="beyond-emoji" aria-hidden="true">🏕️</span>
+          <h3>Camping</h3>
+          <p>Weekends off-grid, under canvas and open skies.</p>
+        </article>
+
+        <article class="beyond-card">
+          <span class="beyond-emoji" aria-hidden="true">🔥</span>
+          <h3>Grilling</h3>
+          <p>Low and slow or hot and fast — there's always fire involved.</p>
+        </article>
+
+        <article class="beyond-card">
+          <span class="beyond-emoji" aria-hidden="true">🎣</span>
+          <h3>Fishing</h3>
+          <p>Quiet water, a bit of patience, and the occasional catch.</p>
+        </article>
+
+        <article class="beyond-card">
+          <span class="beyond-emoji" aria-hidden="true">🥾</span>
+          <h3>Hiking</h3>
+          <p>Trails, trig points, and views worth the climb.</p>
+        </article>
+
+        <article class="beyond-card">
+          <span class="beyond-emoji" aria-hidden="true">🏋️</span>
+          <h3>Strength Training</h3>
+          <p>Progressive overload, one honest session at a time.</p>
+        </article>
+
+        <article class="beyond-card">
+          <span class="beyond-emoji" aria-hidden="true">🥊</span>
+          <h3>Combat Sports</h3>
+          <p>Discipline, sparring, and respect on the mats.</p>
+        </article>
+      </div>
+
+      <div class="coffee-note">
+        <span class="coffee-emoji" aria-hidden="true">☕</span>
+        <p>And through all of it — coffee isn't a habit, it's a dependency. There's a good chance I'm on my third cup right now.</p>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <div class="contact-inner">
         <p class="section-label">Get in touch</p>
@@ -1049,6 +1089,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=12" defer></script>
+  <script src="script.js?v=14" defer></script>
 </body>
 </html>
